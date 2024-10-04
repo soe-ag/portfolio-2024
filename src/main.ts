@@ -2,7 +2,8 @@ import { createApp } from "vue";
 import "./style.css";
 import App from "./App.vue";
 import { createRouter, createWebHistory } from "vue-router";
-import "virtual:uno.css";
+import "uno.css";
+import "virtual:unocss-devtools";
 
 import Home from "./views/Home.vue";
 import About from "./views/About.vue";
