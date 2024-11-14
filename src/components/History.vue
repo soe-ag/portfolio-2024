@@ -8,33 +8,39 @@ const events = ref([
     icon: "i-mdi-numeric-1-circle-outline",
     color: "var(--violet)",
     image: "game-controller.jpg",
+    description:
+      "Develop and maintain responsive web applications using modern JavaScript frameworks like Vue.js. Collaborate with designers andback-end engineers to implement UI/UX designs and integrate APIs.Write clean, reusable code following best practices, andcontribute to code reviews and continuous improvement efforts.",
   },
   {
     status: "456",
     position: "Engineer",
-
     icon: "i-mdi-numeric-2-circle-outline",
     color: "#673AB7",
+    description: "lorem ipsum",
   },
   {
     status: "789",
     position: "Engineer",
-
     icon: "i-mdi-numeric-3-circle-outline",
     color: "#FF9800",
+    description: "sample text",
   },
   {
     status: "444",
     position: "Engineer",
-
     icon: "i-mdi-numeric-4-circle-outline",
     color: "#607D8B",
+    description: "sample text",
   },
 ]);
 </script>
 <template>
   <div class="card">
-    <Timeline :value="events" align="alternate" class="customized-timeline">
+    <Timeline
+      :value="events"
+      align="alternate"
+      class="customized-timeline w-200"
+    >
       <template #marker="slotProps">
         <span
           class="flex w-8 h-8 items-center justify-center text-white rounded-full z-10 shadow-sm"
@@ -44,7 +50,7 @@ const events = ref([
         </span>
       </template>
       <template #content="slotProps">
-        <Card class="mt-4">
+        <Card class="mt-4 text-sm">
           <template #title>
             {{ slotProps.item.status }}
           </template>
@@ -65,13 +71,9 @@ const events = ref([
             </div>
 
             <p>
-              Develop and maintain responsive web applications using modern
-              JavaScript frameworks like Vue.js. Collaborate with designers and
-              back-end engineers to implement UI/UX designs and integrate APIs.
-              Write clean, reusable code following best practices, and
-              contribute to code reviews and continuous improvement efforts.
+              {{ slotProps.item.description }}
             </p>
-            <Button label="Read more" text></Button>
+            <!-- <Button label="Read more" text></Button> -->
           </template>
         </Card>
       </template>

@@ -9,9 +9,11 @@
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
   </div> -->
-  <nav class="flex flex-col gap-2 my-2">
-    <RouterLink to="/">Go to Home</RouterLink>
-    <RouterLink to="/about">Go to About</RouterLink>
+  <nav class="flex gap-2 p-2 text-xl b-b-1 b-b-solid">
+    <RouterLink to="/"> Home</RouterLink>
+    <RouterLink to="/about"> About</RouterLink>
+    <RouterLink to="/projects"> Projects</RouterLink>
+    <RouterLink to="/test1"> Test page</RouterLink>
   </nav>
   <main>
     <RouterView />
